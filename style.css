@@ -1,0 +1,124 @@
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(24, 1, 1);
+    color: white;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+body {
+    margin: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header" 
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 80% 10%;
+  
+    height: 100dvh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+
+}
+
+main {
+    display: inline-flex;
+    min-width: 400px;
+    min-height: 450px;
+
+    max-width: 700px;
+    max-height: 650px;
+
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 30vw;
+    height: 60vh;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    grid-area: main;
+
+    background-color: rgb(61, 3, 3);
+    border-radius: 20px;
+}
+
+main * {
+    background-color: inherit;
+}
+
+@media (max-height: 600px) {
+  main {
+    min-height: 100px;
+    flex-direction: row;
+  }
+
+  #profile img {
+    min-width: 100px;
+  }
+}
+
+
+#profile img {
+    border-radius: 50%;
+    width: 40%;
+    box-shadow: 0px 0px 15px 3px rgb(39, 0, 0);
+}
+
+#links {
+    display: inline-flex;
+}
+
+#links a svg {
+    width: 50px;
+    padding: 10px;
+}
+
+a svg path {
+    fill: white;
+    transition: all 0.3s;
+    transform: scale(1.0);
+    transform-origin: center;
+    
+    
+}
+
+a:hover svg path {
+    fill: rgb(241, 245, 109);
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+
+
+footer {
+    display: flex;
+    grid-area: footer;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+
+
+
+header div img {
+    width: 200px;
+    border-radius: 5rem;
+}
